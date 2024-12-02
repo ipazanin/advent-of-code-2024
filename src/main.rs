@@ -1,13 +1,12 @@
-mod historian_hysteria;
+use red_nosed_reactor::{
+    get_data_from_file::get_data, get_number_of_safe_reports::get_number_of_safe_reports,
+};
 
-use historian_hysteria::{get_data_from_file::get_data_from_file, get_distance::get_distance, get_similarity_score::get_similarity_score};
+mod red_nosed_reactor;
 
 fn main() {
-    let (left, right) = get_data_from_file();
-    let similarity_score = get_similarity_score(&left, &right);
-    println!("{}", similarity_score);
-    
-    let distance = get_distance(left, right);
-    println!("{}", distance);
+    let data = get_data();
+    let number_of_safe_reports = get_number_of_safe_reports(data);
 
+    println!("{}", number_of_safe_reports);
 }
