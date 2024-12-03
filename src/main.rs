@@ -1,12 +1,10 @@
-use red_nosed_reactor::{
-    get_data_from_file::get_data, get_number_of_safe_reports::get_number_of_safe_reports, get_number_of_safe_reports_with_toleration::get_number_of_safe_reports_with_toleration,
-};
+use mull_it_over::{get_data_from_file::get_data, get_uncorrupted_mul_result::get_uncorrupted_mul_result};
 
-mod red_nosed_reactor;
+mod mull_it_over;
 
 fn main() {
     let data = get_data();
-    let number_of_safe_reports = get_number_of_safe_reports_with_toleration(data);
+    let result = get_uncorrupted_mul_result(data);
 
-    println!("{}", number_of_safe_reports);
+    println!("{}", result);
 }
