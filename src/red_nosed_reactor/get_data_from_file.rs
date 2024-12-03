@@ -20,8 +20,6 @@ pub fn get_data() -> Vec<Vec<i32>> {
             line_vector.push(number);
         }
 
-        println!("{:?}", line_vector);
-
         data.push(line_vector);
     }
 
